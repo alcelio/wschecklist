@@ -2,6 +2,9 @@
     <wb-module deploy-name="wschecklist-ejb">
         <wb-resource deploy-path="/" source-path="/src/main/resources" tag="defaultRootSource"/>
         <wb-resource deploy-path="/" source-path="/src/main/java"/>
+        <dependent-module archiveName="utilidades.jar" deploy-path="/" handle="module:/resource/utilidades/utilidades">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/wschecklist-ejb/target/classes"/>
     </wb-module>
 </project-modules>

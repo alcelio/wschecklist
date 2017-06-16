@@ -8,5 +8,8 @@
         <dependent-module archiveName="wschecklist-ejb.jar" deploy-path="/" handle="module:/resource/wschecklist-ejb/wschecklist-ejb">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="utilidades.jar" deploy-path="/lib" handle="module:/resource/utilidades/utilidades">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
     </wb-module>
 </project-modules>
