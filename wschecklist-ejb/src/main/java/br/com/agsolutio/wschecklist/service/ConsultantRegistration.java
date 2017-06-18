@@ -37,7 +37,7 @@ public class ConsultantRegistration {
     
     public void delete(Consultant consultant){
         log.info("Delete " + consultant.getNome());
-        em.remove(em.getReference(Ask.class, consultant.getIdConsultant()));
+        em.remove(em.getReference(Consultant.class, consultant.getIdConsultant()));
         consultantEventSrc.fire(consultant);
     }
     
