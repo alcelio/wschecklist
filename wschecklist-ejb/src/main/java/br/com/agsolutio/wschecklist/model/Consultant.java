@@ -27,7 +27,7 @@ public class Consultant implements Serializable {
 
     @Id
     @GeneratedValue
-    private Long idConsultalt;
+    private Long idConsultant;
 
     @NotNull
     @Size(min = 1, max = 100)
@@ -48,13 +48,13 @@ public class Consultant implements Serializable {
     Sector setor;
 
 
-	public Long getIdConsultalt() {
-		return idConsultalt;
+	public Long getIdConsultant() {
+		return idConsultant;
 	}
 
 
-	public void setIdConsultalt(Long idConsultalt) {
-		this.idConsultalt = idConsultalt;
+	public void setIdConsultant(Long idConsultant) {
+		this.idConsultant = idConsultant;
 	}
 
 
@@ -97,6 +97,57 @@ public class Consultant implements Serializable {
 		this.setor = setor;
 	}
 
-    
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((idConsultant == null) ? 0 : idConsultant.hashCode());
+		result = prime * result + ((matricula == null) ? 0 : matricula.hashCode());
+		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+		result = prime * result + ((senha == null) ? 0 : senha.hashCode());
+		result = prime * result + ((setor == null) ? 0 : setor.hashCode());
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Consultant other = (Consultant) obj;
+		if (idConsultant == null) {
+			if (other.idConsultant != null)
+				return false;
+		} else if (!idConsultant.equals(other.idConsultant))
+			return false;
+		if (matricula == null) {
+			if (other.matricula != null)
+				return false;
+		} else if (!matricula.equals(other.matricula))
+			return false;
+		if (nome == null) {
+			if (other.nome != null)
+				return false;
+		} else if (!nome.equals(other.nome))
+			return false;
+		if (senha == null) {
+			if (other.senha != null)
+				return false;
+		} else if (!senha.equals(other.senha))
+			return false;
+		if (setor == null) {
+			if (other.setor != null)
+				return false;
+		} else if (!setor.equals(other.setor))
+			return false;
+		return true;
+	}
+
+
 	
 }
